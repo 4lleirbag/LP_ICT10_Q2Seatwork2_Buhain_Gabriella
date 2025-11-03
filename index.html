@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+        <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!--Hi ma'am, if you're looking at this, I had a little help for the styles so I asked around...-->
+    <style>
+        body{
+            background-color: #f0e4c3;
+            font-family: 'Poppins', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .display{
+            display: flex;
+            margin-left: 25px;
+        }
+        .label-style{
+            width: 200px;
+            text-align: left;
+            background-color: #f1e788;
+            text-align: center;
+        }
+        p {
+            margin: 3px;
+        }
+        .container{
+            border: solid rgb(241, 179, 86) 2px;
+            padding: 20px;
+            width: 550px;
+            background-color: #f8ebb2;
+            border-radius: 20px;
+        }
+        button{
+            width: 450px;
+            padding: 10px;
+            background-color: #f3bf91;
+            color: white;
+            border-radius: 15px;
+        }
+        .nav{
+            background-color: #ff8e24;
+            width: 1550px;
+            padding: 15px;
+            color: white;
+        }
+        #first, #last {
+        width: 500px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="nav">
+            <a class="navbar-brand" href="index.html"><i class="me-2"></i>Spammington Academy of Technology Arts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    </nav>
+
+    <br><br>
+
+    <div class="container">
+    <bold><center><h1> Student Grade Calculator </h1></center></bold>
+            <div class="cont-2 col-md-6">
+                    <div class="mb-3">
+                        <label for="customer" class="label-style form-label">Given Name</label>
+                        <input type="text" class="form-control" id="first" placeholder="Please enter your first name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="label-style form-label">Surname Name</label>
+                        <input type="text" class="form-control" id="last" placeholder=" Please enter your last name">
+                    </div>
+                </div>
+            <div class="cont-2 col-md-6">
+                <h3 class="custom-text mb-3">Grades per subject</h3>
+                <div class="display">
+                <div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Filipino</label>
+                        <input type="number" class="form-control" id="filipino" placeholder="Please enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">English</label>
+                        <input type="number" class="form-control" id="english" placeholder="Please enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Math</label>
+                        <input type="number" class="form-control" id="math" placeholder="Please enter your grade">
+                    </div>
+                </div>
+                <div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">Information and Communications Technology</label>
+                        <input type="number" class="form-control" id="ict" placeholder="Please enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="customer" class="label-style form-label">Science</label>
+                        <input type="number" class="form-control" id="science" placeholder="Please enter your grade">
+                    </div>
+                    <div class="display mb-3">
+                        <label for="address" class="label-style form-label">Social Sciences</label>
+                        <input type="number" class="form-control" id="ss" placeholder="Please enter your grade">
+                    </div>
+                </div>
+            </div>
+    </div> 
+    <br>
+
+    <button py-click="compute_average">Calculate GPA</button>
+
+    <br><br>
+    
+<div class="display">  
+    <div id="grades_container" style="width: 280px; margin-right: 10px; display: none;" class="container">
+        <p>Filipino: <span id="filipino_output"></span></p>
+        <p>English: <span id="english_output"></span></p>
+        <p>Information and Communications Technology: <span id="ict_output"></span></p>
+        <p>Math: <span id="math_output"></span></p>
+        <p>Science: <span id="science_output"></span></p>
+        <p>Social Sciences: <span id="ss_output"></span></p>
+    </div>
+
+    <div>
+        <br>
+        <div id="name"></div>
+        <br>
+        <div id="output"></div>
+    </div>
+
+</div>
+</div>
+        <script type="py" src="main.py"></script>
+</body>
+</html>
